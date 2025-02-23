@@ -18,8 +18,8 @@ module.exports = {
           `https://kovan.infura.io/v3/${process.env.INFURA_API_KEY}`// Url to an Ethereum Node
         )
       },
-      gas: 5000000,
-      gasPrice: 5000000000, // 5 gwei
+      gas: 6721975,
+      gasPrice: 20000000000, // 5 gwei
       network_id: 42
     },
     main: {
@@ -60,7 +60,7 @@ module.exports = {
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
-      version: ">=0.6.0 <0.8.0",
+      version: "0.8.13",
       optimizer: {
         enabled: true,
         runs: 200

@@ -121,104 +121,60 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-        <img src={dbank} className="App-logo" alt="logo" height="32"/>
-          <b>d₿ank</b>
-        </a>
+            <img src={dbank} className="App-logo" alt="logo" height="32"/>
+            <b>d₿ank</b>
+          </a>
         </nav>
-        <div className="container-fluid mt-5 text-center">
-        <br></br>
-          <h1>Welcome to d₿ank</h1>
+        <div className="container-fluid mt-5 text-center fade-in">
+          <h1 className='animated-text'>Welcome to d₿ank</h1>
           <h2>{this.state.account}</h2>
-          <br></br>
           <div className="row">
             <main role="main" className="col-lg-12 d-flex text-center">
-              <div className="content mr-auto ml-auto">
-              <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example">
-                <Tab eventKey="deposit" title="Deposit">
-                  <div>
-                  <br></br>
-                    How much do you want to deposit?
-                    <br></br>
-                    (min. amount is 0.01 ETH)
-                    <br></br>
-                    (1 deposit is possible at the time)
-                    <br></br>
+              <div className="content p-4">
+                <Tabs defaultActiveKey="deposit" id="uncontrolled-tab-example">
+                  <Tab eventKey="deposit" title="Deposit">
                     <form onSubmit={(e) => {
                       e.preventDefault()
                       let amount = this.depositAmount.value
                       amount = amount * 10**18 //convert to wei
                       this.deposit(amount)
                     }}>
-                      <div className='form-group mr-sm-2'>
-                      <br></br>
-                        <input
-                          id='depositAmount'
-                          step="0.01"
-                          type='number'
-                          ref={(input) => { this.depositAmount = input }}
-                          className="form-control form-control-md"
-                          placeholder='amount...'
-                          required />
-                      </div>
-                      <button type='submit' className='btn btn-primary'>DEPOSIT</button>
+                      <input
+                        id='depositAmount'
+                        step="0.01"
+                        type='number'
+                        ref={(input) => { this.depositAmount = input }}
+                        className="form-control form-control-md"
+                        placeholder='Amount...'
+                        required />
+                      <button type='submit' className='btn btn-primary mt-2'>DEPOSIT</button>
                     </form>
-
-                  </div>
-                </Tab>
-                <Tab eventKey="withdraw" title="Withdraw">
-                  <br></br>
-                    Do you want to withdraw + take interest?
-                    <br></br>
-                    <br></br>
-                  <div>
-                    <button type='submit' className='btn btn-primary' onClick={(e) => this.withdraw(e)}>WITHDRAW</button>
-                  </div>
-                </Tab>
-                <Tab eventKey="borrow" title="Borrow">
-                  <div>
-
-                  <br></br>
-                    Do you want to borrow tokens?
-                    <br></br>
-                    (You'll get 50% of collateral, in Tokens)
-                    <br></br>
-                    Type collateral amount (in ETH)
-                    <br></br>
-                    <br></br>
+                  </Tab>
+                  <Tab eventKey="withdraw" title="Withdraw">
+                    <button type='submit' className='btn btn-primary mt-2' onClick={(e) => this.withdraw(e)}>WITHDRAW</button>
+                  </Tab>
+                  <Tab eventKey="borrow" title="Borrow">
                     <form onSubmit={(e) => {
-
                       e.preventDefault()
                       let amount = this.borrowAmount.value
                       amount = amount * 10 **18 //convert to wei
                       this.borrow(amount)
                     }}>
-                      <div className='form-group mr-sm-2'>
-                        <input
-                          id='borrowAmount'
-                          step="0.01"
-                          type='number'
-                          ref={(input) => { this.borrowAmount = input }}
-                          className="form-control form-control-md"
-                          placeholder='amount...'
-                          required />
-                      </div>
-                      <button type='submit' className='btn btn-primary'>BORROW</button>
+                      <input
+                        id='borrowAmount'
+                        step="0.01"
+                        type='number'
+                        ref={(input) => { this.borrowAmount = input }}
+                        className="form-control form-control-md"
+                        placeholder='Amount...'
+                        required />
+                      <button type='submit' className='btn btn-primary mt-2'>BORROW</button>
                     </form>
-                  </div>
-                </Tab>
-                <Tab eventKey="payOff" title="Payoff">
-                  <div>
-
-                  <br></br>
-                    Do you want to payoff the loan?
-                    <br></br>
-                    (You'll receive your collateral - fee)
-                    <br></br>
-                    <br></br>
-                    <button type='submit' className='btn btn-primary' onClick={(e) => this.payOff(e)}>PAYOFF</button>
-                  </div>
-                </Tab>
-              </Tabs>
+                  </Tab>
+                  <Tab eventKey="payOff" title="Payoff">
+                    <button type='submit' className='btn btn-primary mt-2' onClick={(e) => this.payOff(e)}>PAYOFF</button>
+                  </Tab>
+                </Tabs>
               </div>
             </main>
           </div>

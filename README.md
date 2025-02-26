@@ -1,6 +1,7 @@
 # 🏦 Decentralized Bank (dBank)
 
 Welcome to **dBank**, a decentralized banking system built on the Ethereum blockchain. It allows users to **deposit**, **withdraw**, **borrow**, and **pay off loans** while earning interest in the form of **DBIC tokens**.
+For development purpose we used **Truffle**
 
 ## 🚀 Features
 - **Deposit ETH** and earn DBIC tokens as interest.

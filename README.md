@@ -61,10 +61,10 @@ Click the **Connect Wallet** button to link your MetaMask account.
 ### **5. Pay Off Loan**
 - Click **Pay Off** to repay the loan and unlock your collateral.
 
-## 📜 License
+## 📜 License:
 This project is open-source under the **MIT License**.
 
-## 🤝 Contributing
+## 🤝 Contributing:
 Feel free to submit issues or pull requests!
 
 ## 📧 Contact

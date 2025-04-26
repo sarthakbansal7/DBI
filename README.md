@@ -14,6 +14,8 @@ For development purpose we used **Truffle**
 - **DBank.sol**: Handles deposits, withdrawals, borrowing, and payoffs.
 - **Token.sol**: ERC-20 contract for DBIC token minting.
 
+We are also planning to make this gas free for our users and cost them on different services also we can provide pools for lending/borrowing.
+
 ## 🛠 Installation & Setup
 ### 1️⃣ Clone the Repository
 ```sh
